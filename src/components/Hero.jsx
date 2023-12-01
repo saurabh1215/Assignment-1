@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <section className="flex flex-none flex-col h-[100hv] max-w-[1200px] mx-auto  py-[70px]">
       <div className="flex flex-none flex-col items-center justify-center px-[160px]">
-        <div className="bg-[#F1F2F4] py-[6px] px-[16px] rounded-2xl font-PlusJakartaSansBold text-[16px]">
+        <div className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-[16px]">
           An other way to manage time
         </div>
         <div className="flex flex-none items-center justify-center text-center leading-[80px] tracking-wider">
@@ -27,8 +27,8 @@ const Hero = () => {
           </p>
         </div>
         <div className="font-PlusJakartaSansMedium leading-[32px] text-center text-[19px] py-10 px-12 text-slate-500 tracking-wider">
-          Here you should explain how cool your app is. Remember, focus on the
-          benefits for your users, not on the features.{" "}
+          Here you should explain how cool your app is. Remember, <br></br>focus
+          on the benefits for your users, not on the features.{" "}
         </div>
         <div>
           <a href="#contact">
@@ -77,7 +77,7 @@ const Hero = () => {
       <div className="flex py-3 items-center justify-center">
         <img
           src={SuperPageImg}
-          className="w-[950px] h-[570px]"
+          className="object-center h-auto w-[1200px] object-fill"
           alt="sectionImg"
         />
       </div>
