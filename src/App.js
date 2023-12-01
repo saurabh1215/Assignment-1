@@ -1,9 +1,14 @@
 import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className="flex flex-col overflow-x-auto">
+      <div className="bg-orange-50 bg-no-repeat bg-cover bg-center">
+        <Navbar />
+        <Hero />
+      </div>
     </div>
   );
 };
