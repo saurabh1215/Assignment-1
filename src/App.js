@@ -9,7 +9,6 @@ const App = () => {
         <div className="border-b-[1px]">
           <Navbar />
         </div>
-
         <Hero />
       </div>
     </div>

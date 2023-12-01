@@ -8,11 +8,13 @@ const Navbar = () => {
       <div className="">
         <a href="/" className="flex flex-row">
           <img src={logo} alt="logo" />
-          <p className="text-[16px] font-bold text-gray-600 text-lg">Milton</p>
+          <p className="text-[16px] font-PlusJakartaSansBold text-gray-600 text-lg">
+            Milton
+          </p>
         </a>
       </div>
 
-      <ul className="list-none lg:flex hidden justify-end gap-10 items-center font-bold text-gray-500 text-[16px]">
+      <ul className="list-none lg:flex hidden justify-end gap-10 items-center font-PlusJakartaSansBold text-gray-500 text-[16px]">
         <li className="justify-end hover:underline items-center transition duration-300 ease-in-out">
           <a href="#features">Features</a>
         </li>
@@ -32,12 +34,12 @@ const Navbar = () => {
 
       <div className="flex gap-2">
         <a href="#login">
-          <button className="bg-slate-100 text-gray-600 rounded-xl py-2 px-5 font-bold text-[16px]">
+          <button className="bg-slate-100 text-gray-600 rounded-xl py-2 px-5 font-PlusJakartaSansBold text-[16px]">
             <p>Log in</p>
           </button>
         </a>
         <a href="#contact">
-          <button className="bg-black text-[#FEFEFE] rounded-xl py-2 px-5 font-bold text-[16px]">
+          <button className="bg-black text-[#FEFEFE] rounded-xl py-2 px-5 font-PlusJakartaSansBold text-[16px]">
             <p>Get started</p>
           </button>
         </a>
