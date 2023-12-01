@@ -16,7 +16,7 @@ import user5 from "../assets/user5.webp";
 
 const Hero = () => {
   return (
-    <section className="flex flex-none flex-col h-[100hv] max-w-[1200px] mx-auto  py-[70px]">
+    <section className="flex flex-none flex-col h-[100hv] max-w-[1200px] mx-auto  py-[150px]">
       <div className="flex flex-none flex-col items-center justify-center px-[160px]">
         <div className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-[16px]">
           An other way to manage time

@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="flex flex-col overflow-x-auto">
       <div className="bg-[#FEF9F6] bg-no-repeat bg-cover bg-center ">
-        <div className="border-b-[1px]">
+        <div className="border-b-[1px] bg-[#FEF9F6] w-full fixed">
           <Navbar />
         </div>
         <Hero />
