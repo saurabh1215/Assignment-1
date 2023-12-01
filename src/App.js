@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 const App = () => {
   return (
     <div className="flex flex-col overflow-x-auto">
-      <div className="bg-orange-50 bg-no-repeat bg-cover bg-center">
+      <div className="bg-[#FEF9F6] bg-no-repeat bg-cover bg-center">
         <Navbar />
         <Hero />
       </div>
