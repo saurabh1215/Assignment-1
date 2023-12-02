@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Features from "./components/Features";
 // import Footer from "./components/Footer";
 import FeaturesCard from "./components/FeaturesCard";
+import ReadyToStart from "./components/ReadyToStart";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Hero />
         <Features />
         <FeaturesCard />
+        <ReadyToStart />
         {/* <Footer /> */}
       </div>
     </div>
