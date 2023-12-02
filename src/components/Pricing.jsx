@@ -5,7 +5,9 @@ import tickImg from "../assets/tick.png";
 const Pricing = () => {
   const pricingCards = [
     {
+      index: "1",
       tag: "Free",
+      bgColor: "#F1F2F4",
       tagPara: "So you can see how incredible our tool is.",
       dollar: "$0",
       dollarMonth: "/mo",
@@ -13,15 +15,18 @@ const Pricing = () => {
       button: "Get started",
       btnTag: "No credit card needed",
       contentHead: "What's included:",
-      tickImg: tickImg,
-      contentText1: "A cool feature",
-      contentText2: "A basic feature",
-      contentText3: "A top feature with limitations",
-      contentText4: "An incredible feature so useful",
-      contentText5: "A top feature",
+      contentText: [
+        "A cool feature",
+        "A basic feature",
+        "A top feature with limitations",
+        "An incredible feature so useful",
+        "A top feature",
+      ],
     },
     {
+      index: "2",
       tag: "Starter",
+      bgColor: "#FEE9CB",
       tagPara: "So you can see how incredible our tool is.",
       dollar: "$15",
       dollarMonth: "/mo",
@@ -29,15 +34,18 @@ const Pricing = () => {
       button: "Get started",
       btnTag: "7 days free trial no credit card needed",
       contentHead: "All Free features, plus:",
-      tickImg: tickImg,
-      contentText1: "A cool feature",
-      contentText2: "A basic feature",
-      contentText3: "A top feature with limitations",
-      contentText4: "An incredible feature so useful",
-      contentText5: "A top feature",
+      contentText: [
+        "A cool feature",
+        "A basic feature",
+        "A top feature with limitations",
+        "An incredible feature so useful",
+        "A top feature",
+      ],
     },
     {
+      index: "3",
       tag: "Pro",
+      bgColor: "#FDDED6",
       tagPara: "So you can see how incredible our tool is.",
       dollar: "$45",
       dollarMonth: "/mo",
@@ -45,19 +53,20 @@ const Pricing = () => {
       button: "Get started",
       btnTag: " days free trial no credit card needed",
       contentHead: "All Starter features, plus:",
-      tickImg: tickImg,
-      contentText1: "A cool feature",
-      contentText2: "A basic feature",
-      contentText3: "A top feature with limitations",
-      contentText4: "An incredible feature so useful",
-      contentText5: "A premium feature",
-      contentText6: "You need this feature",
+      contentText: [
+        "A cool feature",
+        "A basic feature",
+        "A top feature with limitations",
+        "An incredible feature so useful",
+        "A top feature",
+        "You need this feature",
+      ],
     },
   ];
   return (
-    <div className="flex flex-none flex-col h-[100hv] max-w-[1200px] mx-auto  py-[70px]">
+    <div className="flex flex-none flex-col max-w-[1200px] mx-auto  py-[70px] drop-shadow-xl ">
       <div className="flex flex-none flex-col items-center justify-center  gap-4">
-        <div className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-[16px] text-[#2E2E2E]">
+        <div className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-[16px] text-[#2E2E2E] ">
           Pricing and plans 💰
         </div>
         <div className="flex flex-none items-center justify-center text-center tracking-wide text-[58px] font-PlusJakartaSansExtraBold ">
@@ -75,11 +84,21 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="md:flex flex-col lg:flex-row gap-4 md:gap-6 flex-wrap md:justify-between items-center justify-center">
+      <div className="md:flex flex-col lg:flex-row gap-4 md:gap-6 flex-wrap md:justify-between justify-center ">
         {pricingCards.map((card, index) => (
           <>
-            <div className="flex flex-col md:flex-none md:w-96 items-start justify-start group pt-8 bg-white rounded-2xl h-[660px] w-[384px] px-8">
-              <button className="bg-slate-100 text-gray-700 rounded-full py-2 px-8 font-PlusJakartaSansBold text-[16px]">
+            <div className="flex flex-col md:flex-none md:w-96 items-start justify-start group pt-8 bg-white rounded-2xl w-[384px] px-8 relative py-4">
+              {index === 1 ? (
+                <button className="bg-black text-[#eeeeee]  rounded-full py-[7px] px-4 font-PlusJakartaSansBold text-[14px] absolute left-56 -top-3 ">
+                  <p> Best deal 🔥</p>
+                </button>
+              ) : (
+                ""
+              )}
+              <button
+                className="bg-slate-100 text-gray-700 rounded-full py-2 px-8 font-PlusJakartaSansBold text-[16px]"
+                style={{ backgroundColor: `${card.bgColor}` }}
+              >
                 <p> {card.tag}</p>
               </button>
               <div className="font-PlusJakartaSansMedium  text-slate-500 my-5">
@@ -116,49 +135,16 @@ const Pricing = () => {
                 {card.contentHead}
               </div>
 
-              {/* ***** ****** */}
-
-              <div className="flex my-1">
-                <div className="h-9">
-                  <img src={card.tickImg} alt="" />
+              {card.contentText?.map((data, index) => (
+                <div className="flex my-1" key={index}>
+                  <div className="h-9">
+                    <img src={tickImg} alt="" />
+                  </div>
+                  <div className="text-gray-500 font-PlusJakartaSansMedium text-[16px] px-1">
+                    {data}
+                  </div>
                 </div>
-                <div className="text-gray-500 font-PlusJakartaSansMedium text-[16px] px-1">
-                  {card.contentText1}
-                </div>
-              </div>
-
-              <div className="flex my-1">
-                <div className="h-9">
-                  <img src={card.tickImg} alt="" />
-                </div>
-                <div className="text-gray-600 font-PlusJakartaSansRegular text-[16px] px-1">
-                  {card.contentText2}
-                </div>
-              </div>
-              <div className="flex my-1">
-                <div className="h-9">
-                  <img src={card.tickImg} alt="" />
-                </div>
-                <div className="text-gray-600 font-PlusJakartaSansRegular text-[16px] px-1">
-                  {card.contentText3}
-                </div>
-              </div>
-              <div className="flex my-1">
-                <div className="h-9">
-                  <img src={card.tickImg} alt="" />
-                </div>
-                <div className="text-gray-600 font-PlusJakartaSansRegular text-[16px] px-1">
-                  {card.contentText4}
-                </div>
-              </div>
-              <div className="flex my-1">
-                <div className="h-9">
-                  <img src={card.tickImg} alt="" />
-                </div>
-                <div className="text-gray-600 font-PlusJakartaSansRegular text-[16px] px-1">
-                  {card.contentText5}
-                </div>
-              </div>
+              ))}
             </div>
           </>
         ))}
