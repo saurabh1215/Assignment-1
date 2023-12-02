@@ -32,7 +32,7 @@ const Hero = () => {
         </div>
         <div>
           <a href="#contact">
-            <button className="bg-black text-[#FEFEFE] rounded-lg py-4 px-8 font-bold text-[18px]">
+            <button className="bg-black text-[#FEFEFE] rounded-lg py-4 px-8 font-PlusJakartaSansMedium text-[18px]">
               <p>Get started, it's free</p>
             </button>
           </a>

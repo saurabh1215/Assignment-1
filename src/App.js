@@ -5,6 +5,8 @@ import Features from "./components/Features";
 // import Footer from "./components/Footer";
 import FeaturesCard from "./components/FeaturesCard";
 import ReadyToStart from "./components/ReadyToStart";
+// import FAQs from "./components/FAQs";
+import Pricing from "./components/Pricing";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Hero />
         <Features />
         <FeaturesCard />
+        <Pricing />
+        {/* <FAQs /> */}
         <ReadyToStart />
         {/* <Footer /> */}
       </div>
