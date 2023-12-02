@@ -5,7 +5,7 @@ import Features from "./components/Features";
 import Footer from "./components/Footer";
 import FeaturesCard from "./components/FeaturesCard";
 import ReadyToStart from "./components/ReadyToStart";
-// import FAQs from "./components/FAQs";
+import FAQs from "./components/FAQs";
 import Pricing from "./components/Pricing";
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         <Features />
         <FeaturesCard />
         <Pricing />
-        {/* <FAQs /> */}
+        <FAQs />
         <ReadyToStart />
         <Footer />
       </div>

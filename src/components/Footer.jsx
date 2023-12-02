@@ -66,7 +66,7 @@ const Footer = () => {
 
               {data.text?.map((data, index) => (
                 <div
-                  className="font-PlusJakartaSansMedium my-2 px-5 text-slate-500 text-[16px]"
+                  className="leading-5 font-PlusJakartaSansMedium my-2 px-5 text-slate-500 text-[16px]"
                   key={index}
                 >
                   {data}

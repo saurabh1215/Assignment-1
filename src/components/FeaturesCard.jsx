@@ -14,7 +14,7 @@ import cardImg6 from "../assets/cardImg6.webp";
 
 // @ts-ignore
 const Cards = ({ imageSrc, headingText, textContent, headingColor }) => (
-  <div className="flex flex-col flex- md:flex-none md:w-96  items-start justify-start group pt-8">
+  <div className="flex flex-col md:flex-none md:w-96  items-start justify-start group pt-8">
     <div className="flex items-center justify-center rounded-2xl border border-solid border-gray-200 bg-[#F1F2F4] w-[387px] h-[265px]">
       <img src={imageSrc} alt="" className="w-[270] h-[185px] " />
     </div>
