@@ -8,13 +8,13 @@ import bodyLargeImg3 from "../assets/bodyLargeImg3.webp";
 // @ts-ignore
 import bodyLargeImg4 from "../assets/bodyLargeImg4.webp";
 // @ts-ignore
-import bodySmallImg1 from "../assets/bodySmallImg1.svg";
+import bodySmallImg1 from "../assets/bodySmallImg1.png";
 // @ts-ignore
-import bodySmallImg2 from "../assets/bodySmallImg2.svg";
+import bodySmallImg2 from "../assets/bodySmallImg2.png";
 // @ts-ignore
-import bodySmallImg3 from "../assets/bodySmallImg3.svg";
+import bodySmallImg3 from "../assets/bodySmallImg3.png";
 // @ts-ignore
-import bodySmallImg4 from "../assets/bodySmallImg4.svg";
+import bodySmallImg4 from "../assets/bodySmallImg4.png";
 import FeaturesSection from "./FeaturesSection";
 
 const Features = () => {
