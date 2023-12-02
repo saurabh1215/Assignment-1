@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="flex flex-row items-center justify-between align-center h-[80px] max-w-[1200px] mx-auto px-10 ">
       <div className="">
         <a href="/" className="flex flex-row">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" className=" mr-1" />
           <p className="text-[16px] font-PlusJakartaSansBold text-gray-600 text-lg">
             Milton
           </p>

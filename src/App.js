@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import FeaturesCard from "./components/FeaturesCard";
 import ReadyToStart from "./components/ReadyToStart";
 // import FAQs from "./components/FAQs";
@@ -21,7 +21,7 @@ const App = () => {
         <Pricing />
         {/* <FAQs /> */}
         <ReadyToStart />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
