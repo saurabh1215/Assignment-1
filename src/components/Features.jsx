@@ -20,6 +20,7 @@ import FeaturesSection from "./FeaturesSection";
 const Features = () => {
   const featuresData = [
     {
+      index: "1",
       chipText: "Seamless Scheduling",
       chipBgColor: "#FEE9CB",
       heading: "Focus on what matters most for you",
@@ -29,6 +30,7 @@ const Features = () => {
       bodyImgLarge: bodyLargeImg1,
     },
     {
+      index: "2",
       chipText: "Smart Reminders & Task",
       chipBgColor: "#CCEAFD",
       heading: "Never miss an important deadline or event again",
@@ -38,6 +40,7 @@ const Features = () => {
       bodyImgLarge: bodyLargeImg2,
     },
     {
+      index: "3",
       chipText: "Seamless Scheduling",
       chipBgColor: "#DDF4E4",
       heading: "Focus on what matters most for you",
@@ -47,6 +50,7 @@ const Features = () => {
       bodyImgLarge: bodyLargeImg3,
     },
     {
+      index: "4",
       chipText: "Smart Reminders & Task",
       chipBgColor: "#FDDED6",
       heading: "Never miss an important deadline or event again",
@@ -71,6 +75,7 @@ const Features = () => {
       {featuresData.map((data, index) => (
         <FeaturesSection
           key={index}
+          index={index}
           chipText={data.chipText}
           chipBgColor={data.chipBgColor}
           heading={data.heading}

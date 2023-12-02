@@ -1,6 +1,7 @@
 import React from "react";
 
 const FeaturesSection = ({
+  index,
   chipText,
   chipBgColor,
   heading,
@@ -9,15 +10,22 @@ const FeaturesSection = ({
   bodyImgLarge,
 }) => {
   return (
-    <div className="flex flex-row items-center justify-center mt-8 gap-28">
+    <div
+      className={`flex items-center justify-center my-20 gap-28 ${
+        index % 2 === 1 ? "flex-row-reverse" : "flex-row"
+      }`}
+    >
       <div className="flex flex-col items-start justify-start h-auto w-[900px]">
-        <div className="py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-[16px] text-[#2E2E2E] ">
+        <div
+          className={`py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-[16px] text-[#2E2E2E] `}
+          style={{ backgroundColor: `${chipBgColor}` }}
+        >
           {chipText}
         </div>
         <div className=" tracking-wide text-[40px] font-PlusJakartaSansExtraBold pt-3">
           {heading}
         </div>
-        <div className="font-PlusJakartaSansMedium leading-[32px] text-[19px] py-10 text-slate-500 tracking-wide text-start">
+        <div className="font-PlusJakartaSansMedium leading-[32px] text-[18px] py-10 text-slate-500 tracking-wide text-start">
           {textContent}
         </div>
         <div className="overflow-visible">

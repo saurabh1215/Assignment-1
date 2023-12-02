@@ -1,6 +1,6 @@
 import React from "react";
 // @ts-ignore
-import SuperPageImg from "../assets/superPage.png";
+import SuperPageImg from "../assets/superPage.webp";
 // @ts-ignore
 import Star from "../assets/starYellow.png";
 // @ts-ignore
@@ -40,6 +40,7 @@ const Hero = () => {
         <div className="text-[14px] text-slate-500">
           Free 14 days trials,no credit card needed
         </div>
+
         <div className="flex flex-row py-12 gap-0">
           <div className="flex justify-center items-center relative text-center mr-44">
             <div className="absolute left-0 right-0 h-12 w-12 border-[5px] rounded-full border-white">
@@ -74,10 +75,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="flex py-3 items-center justify-center">
+      <div className="flex items-center justify-center">
         <img
           src={SuperPageImg}
-          className="object-center h-auto w-[1200px] object-fill"
+          className="rounded-2xl border border-solid h-[729px] w-[1200px] border-gray-200"
           alt="sectionImg"
         />
       </div>
