@@ -57,9 +57,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-14 justify-center items-center">
+        <div className="flex flex-row gap-14 justify-center ">
           {footerData.map((data, i) => (
-            <div className="flex flex-col  flex-wrap max-w-[1000px]" key={i}>
+            <div className="flex flex-col max-w-[1000px]" key={i}>
               <div className="font-PlusJakartaSansBold text-slate-700 text-[20px] my-2 px-5">
                 {data.heading}
               </div>
