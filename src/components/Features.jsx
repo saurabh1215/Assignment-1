@@ -18,7 +18,6 @@ import bodySmallImg4 from "../assets/bodySmallImg4.svg";
 import FeaturesSection from "./FeaturesSection";
 
 const Features = () => {
-  // @ts-ignore
   const featuresData = [
     {
       chipText: "Seamless Scheduling",

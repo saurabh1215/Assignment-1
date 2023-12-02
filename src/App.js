@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
+import FeaturesCard from "./components/FeaturesCard";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         </div>
         <Hero />
         <Features />
+        <FeaturesCard />
         <Footer />
       </div>
     </div>
