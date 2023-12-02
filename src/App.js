@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import FeaturesCard from "./components/FeaturesCard";
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
         <Hero />
         <Features />
         <FeaturesCard />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
