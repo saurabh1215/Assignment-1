@@ -14,18 +14,18 @@ import cardImg6 from "../assets/cardImg6.webp";
 
 // @ts-ignore
 const Cards = ({ imageSrc, headingText, textContent, headingColor }) => (
-  <div className="flex flex-col md:flex-none md:w-96  items-start justify-start group pt-8">
-    <div className="flex items-center justify-center rounded-2xl border border-solid border-gray-200 bg-[#F1F2F4] w-[387px] h-[265px]">
+  <div className="flex flex-col md:flex-none md:w-96  items-center justify-center group md:pt-8">
+    <div className="flex items-center justify-center rounded-2xl border border-solid border-gray-200 bg-[#F1F2F4] md:w-[23.43rem] md:h-[16.56rem] w-[20rem] h-[15rem]">
       <img src={imageSrc} alt="" className="w-[270] h-[185px] " />
     </div>
 
     <div
-      className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-[16px] my-8"
+      className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-base my-8"
       style={{ backgroundColor: `${headingColor}` }}
     >
-      <p>{headingText}</p>
+      {headingText}
     </div>
-    <div className="font-PlusJakartaSansMedium  text-slate-500 mr-5">
+    <div className="font-PlusJakartaSansMedium  text-slate-500 md:mr-5 mx-5 py-5">
       <p>{textContent}</p>
     </div>
   </div>
@@ -77,12 +77,12 @@ const FeaturesCard = () => {
     },
   ];
   return (
-    <div className="md:px-[7.5rem] px-4 py-[2.5rem] gap-9 flex flex-col md:py-[5.62rem] md:max-w-[90rem] mx-auto max-w-[375px]">
+    <div className="md:px-[7.5rem] nd:px-4 gap-9 flex flex-col md:py-[5.62rem] md:max-w-[90rem] mx-auto max-w-[23.43rem]">
       <div className="flex flex-none flex-col items-center justify-center  gap-4 ">
-        <div className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-[16px]">
+        <div className="bg-[#F1F2F4] md:py-2 md:px-4 py-2 px-3 rounded-full font-PlusJakartaSansBold text-sm md:text-base ">
           And so much more... 💼
         </div>
-        <div className="flex flex-none items-center justify-center text-center tracking-wide text-[58px] font-PlusJakartaSansExtraBold px-40 ">
+        <div className="flex flex-none items-center justify-center text-center md:text-[3.25rem] text-[2rem] font-PlusJakartaSansExtraBold md:leading-[5rem] md:tracking-wider leading-[2.5rem] tracking-wider py-2 mx-6 my-4 ">
           Our features to make your life easier
         </div>
       </div>
