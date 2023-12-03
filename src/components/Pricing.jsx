@@ -72,21 +72,6 @@ const Pricing = () => {
     );
   };
 
-  const updatedPricingCards = pricingCards.map((card) => {
-    let updatedCard = { ...card };
-    if (billingPeriod === "annually") {
-      // Update prices and tags for annual billing
-      updatedCard.dollar =
-        "$" + (parseFloat(card.dollar.slice(1)) * 10).toFixed(2);
-      updatedCard.dollarTag = "Billed annually";
-    } else {
-      // Default to monthly prices and tags
-      updatedCard.dollar = card.dollar;
-      updatedCard.dollarTag = card.dollarTag;
-    }
-    return updatedCard;
-  });
-
   return (
     <div className="flex flex-none flex-col max-w-[1200px] mx-auto  py-16 drop-shadow-xl ">
       <div className="flex flex-none flex-col items-center justify-center  gap-4">
