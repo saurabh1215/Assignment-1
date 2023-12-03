@@ -1,10 +1,17 @@
 import React from "react";
 // @ts-ignore
 import logo from "../assets/logo.svg";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
-    <nav className="flex flex-row items-center justify-between align-center h-[80px] max-w-[1200px] mx-auto px-10 ">
+    <nav className="flex flex-row items-center justify-between align-center h-[80px] px-10 md:max-w-[90rem] mx-auto max-w-[375px] ">
       <div className="">
         <a href="/" className="flex flex-row">
           <img src={logo} alt="logo" className=" mr-1" />
@@ -12,6 +19,16 @@ const Navbar = () => {
             Milton
           </p>
         </a>
+      </div>
+
+      <div className="lg:hidden">
+        <button
+          onClick={toggleMenu}
+          className="focus:outline-none text-gray-600 text-2xl"
+          aria-label="Toggle Menu"
+        >
+          ☰
+        </button>
       </div>
 
       <ul className="list-none lg:flex hidden justify-end gap-10 items-center font-PlusJakartaSansBold text-gray-500 text-base">
@@ -32,12 +49,13 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <div className="flex gap-2">
+      <div className={`${showMenu ? "block" : "hidden"} flex gap-2 lg:flex`}>
         <a href="#login">
           <button className="bg-slate-100 text-gray-600 rounded-xl py-2 px-5 font-PlusJakartaSansBold text-base">
             <p>Log in</p>
           </button>
         </a>
+
         <a href="#contact">
           <button className="bg-black text-[#FEFEFE] rounded-xl py-2 px-5 font-PlusJakartaSansBold text-base">
             <p>Get started</p>
