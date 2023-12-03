@@ -164,7 +164,7 @@ const Pricing = () => {
               <div className="flex flex-col justify-center items-center">
                 <div>
                   <a href="#contact">
-                    <button className="bg-black text-[#eeeeee] rounded-lg py-3 px-[6.8rem] font-PlusJakartaSansBold text-lg">
+                    <button className="bg-black text-[#eeeeee] rounded-lg py-3 px-[6rem] ml-4 font-PlusJakartaSansBold text-lg">
                       <p>{card.button}</p>
                     </button>
                   </a>
