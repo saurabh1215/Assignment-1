@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 // @ts-ignore
 import tickImg from "../assets/tick.png";
 
 const Pricing = () => {
+  const [billingPeriod, setBillingPeriod] = useState("monthly");
+
   const pricingCards = [
     {
       index: "1",
@@ -63,21 +65,61 @@ const Pricing = () => {
       ],
     },
   ];
+
+  const toggleBillingPeriod = () => {
+    setBillingPeriod((prevPeriod) =>
+      prevPeriod === "monthly" ? "annually" : "monthly"
+    );
+  };
+
+  const updatedPricingCards = pricingCards.map((card) => {
+    let updatedCard = { ...card };
+    if (billingPeriod === "annually") {
+      // Update prices and tags for annual billing
+      updatedCard.dollar =
+        "$" + (parseFloat(card.dollar.slice(1)) * 10).toFixed(2);
+      updatedCard.dollarTag = "Billed annually";
+    } else {
+      // Default to monthly prices and tags
+      updatedCard.dollar = card.dollar;
+      updatedCard.dollarTag = card.dollarTag;
+    }
+    return updatedCard;
+  });
+
   return (
-    <div className="flex flex-none flex-col max-w-[1200px] mx-auto  py-[70px] drop-shadow-xl ">
+    <div className="flex flex-none flex-col max-w-[1200px] mx-auto  py-16 drop-shadow-xl ">
       <div className="flex flex-none flex-col items-center justify-center  gap-4">
-        <div className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-[16px] text-[#2E2E2E] ">
+        <div className="bg-[#F1F2F4] py-2 px-5 rounded-full font-PlusJakartaSansBold text-base text-[#2E2E2E] ">
           Pricing and plans 💰
         </div>
-        <div className="flex flex-none items-center justify-center text-center tracking-wide text-[58px] font-PlusJakartaSansExtraBold ">
+        <div className="flex flex-none items-center justify-center text-center tracking-wide text-6xl font-PlusJakartaSansExtraBold ">
           Find the best plan for your needs
         </div>
       </div>
 
       <div className="flex flex-row justify-center items-center py-12 mt-16">
-        <div className="flex flex-row bg-[#F1F2F4] py-[9px] px-14 rounded-xl font-PlusJakartaSansMedium text-[16px] gap-6 text-gray-400 text-lg">
-          <p>Monthly</p>
-          <p>Annually</p>
+        <div className="flex flex-row justify-evenly bg-[#F1F2F4] text-gray-400 rounded-xl font-PlusJakartaSansBold gap-5 text-sm py-1 w-72">
+          <button
+            className={
+              billingPeriod === "monthly"
+                ? "text-black bg-white py-2 px-8 rounded-xl "
+                : ""
+            }
+            onClick={() => toggleBillingPeriod()}
+          >
+            Monthly
+          </button>
+          <button
+            className={
+              billingPeriod === "annually"
+                ? "text-black bg-white py-2 px-8 rounded-xl"
+                : ""
+            }
+            onClick={() => toggleBillingPeriod()}
+          >
+            Annually
+          </button>
         </div>
         <div className="font-PlusJakartaSansBold mx-6 ">
           <p>✨ save 30%</p>
@@ -89,14 +131,14 @@ const Pricing = () => {
           <>
             <div className="flex flex-col md:flex-none md:w-96 items-start justify-start group pt-8 bg-white rounded-2xl w-[384px] px-8 relative py-4">
               {index === 1 ? (
-                <button className="bg-black text-[#eeeeee]  rounded-full py-[7px] px-4 font-PlusJakartaSansBold text-[14px] absolute left-56 -top-3 ">
+                <button className="bg-black text-[#eeeeee]  rounded-full py-[7px] px-4 font-PlusJakartaSansBold text-sm absolute left-56 -top-3 ">
                   <p> Best deal 🔥</p>
                 </button>
               ) : (
                 ""
               )}
               <button
-                className="bg-slate-100 text-gray-700 rounded-full py-2 px-8 font-PlusJakartaSansBold text-[16px]"
+                className="bg-slate-100 text-gray-700 rounded-full py-2 px-8 font-PlusJakartaSansBold text-base"
                 style={{ backgroundColor: `${card.bgColor}` }}
               >
                 <p> {card.tag}</p>
@@ -106,7 +148,7 @@ const Pricing = () => {
               </div>
 
               <div className="flex flex-row justify-end items-baseline ">
-                <div className=" tracking-wide text-[50px] font-PlusJakartaSansExtraBold">
+                <div className=" tracking-wide text-5xl font-PlusJakartaSansExtraBold">
                   {card.dollar}
                 </div>
                 <div className="font-PlusJakartaSansMedium text-slate-400">
@@ -114,24 +156,24 @@ const Pricing = () => {
                 </div>
               </div>
 
-              <div className=" font-PlusJakartaSansMedium text-[16px] mb-6">
+              <div className=" font-PlusJakartaSansMedium text-base mb-6">
                 {card.dollarTag}
               </div>
 
               <div className="flex flex-col justify-center items-center">
                 <div>
                   <a href="#contact">
-                    <button className="bg-black text-[#eeeeee] rounded-lg py-[12px] px-[6.8rem] font-PlusJakartaSansBold text-[18px]">
+                    <button className="bg-black text-[#eeeeee] rounded-lg py-3 px-[6.8rem] font-PlusJakartaSansBold text-lg">
                       <p>{card.button}</p>
                     </button>
                   </a>
                 </div>
-                <div className="text-[12px] text-slate-800 font-PlusJakartaSansMedium p-2 mb-7">
+                <div className="text-xs text-slate-800 font-PlusJakartaSansMedium p-2 mb-7">
                   {card.btnTag}
                 </div>
               </div>
 
-              <div className=" text-gray-800 py-2 font-PlusJakartaSansBold text-[17px]">
+              <div className=" text-gray-800 py-2 font-PlusJakartaSansBold text-base">
                 {card.contentHead}
               </div>
 
@@ -140,7 +182,7 @@ const Pricing = () => {
                   <div className="h-9">
                     <img src={tickImg} alt="" />
                   </div>
-                  <div className="text-gray-500 font-PlusJakartaSansMedium text-[16px] px-1">
+                  <div className="text-gray-500 font-PlusJakartaSansMedium text-base px-1">
                     {data}
                   </div>
                 </div>
