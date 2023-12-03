@@ -87,19 +87,19 @@ const Pricing = () => {
 
   return (
     <div
-      className="flex flex-none flex-col max-w-[1200px] mx-auto  py-16 drop-shadow-xl"
+      className="flex flex-none flex-col items-center justify-center md:px-58 md:max-w-[90rem] mx-auto max-w-[23.43rem] md:py-40 pt-36"
       id="pricing"
     >
       <div className="flex flex-none flex-col items-center justify-center  gap-4">
-        <div className="bg-[#F1F2F4] py-2 px-5 rounded-full font-PlusJakartaSansBold text-base text-[#2E2E2E] ">
+        <div className="bg-[#F1F2F4] md:py-2 md:px-4 py-2 px-3 rounded-full font-PlusJakartaSansBold text-sm md:text-base ">
           Pricing and plans 💰
         </div>
-        <div className="flex flex-none items-center justify-center text-center tracking-wide text-6xl font-PlusJakartaSansExtraBold ">
+        <div className="flex flex-none items-center justify-center text-center md:text-[3.25rem] text-[2rem] font-PlusJakartaSansExtraBold md:leading-[5rem] md:tracking-wider leading-[2.5rem] tracking-wider py-2 mx-6 my-4 ">
           Find the best plan for your needs
         </div>
       </div>
 
-      <div className="flex flex-row justify-center items-center py-12 mt-16">
+      <div className="flex md:flex-row flex-col justify-center items-center md:py-12 mt-16 py-1 ">
         <div className="flex flex-row justify-evenly bg-[#F1F2F4] text-gray-400 rounded-xl font-PlusJakartaSansBold gap-5 text-sm py-1 w-72">
           <button
             className={
@@ -122,7 +122,7 @@ const Pricing = () => {
             Annually
           </button>
         </div>
-        <div className="font-PlusJakartaSansBold mx-6 ">
+        <div className="font-PlusJakartaSansBold mx-6 my-5">
           <p>✨ save 30%</p>
         </div>
       </div>
@@ -130,7 +130,7 @@ const Pricing = () => {
       <div className="md:flex flex-col lg:flex-row gap-4 md:gap-6 flex-wrap md:justify-between justify-center ">
         {updatedPricingCards.map((card, index) => (
           <>
-            <div className="flex flex-col md:flex-none md:w-96 items-start justify-start group pt-8 bg-white rounded-2xl w-[384px] px-8 relative py-4">
+            <div className="flex flex-col md:flex-none md:w-96 items-start justify-start group pt-8 bg-white rounded-2xl w-[384px] h-auto px-8 relative py-4 md:my-0 my-10 border border-solid border-gray-200">
               {index === 1 ? (
                 <button className="bg-black text-[#eeeeee]  rounded-full py-[7px] px-4 font-PlusJakartaSansBold text-sm absolute left-56 -top-3 ">
                   <p> Best deal 🔥</p>
