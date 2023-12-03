@@ -76,7 +76,7 @@ const Hero = () => {
       <div className="flex items-center justify-center ">
         <img
           src={SuperPageImg}
-          className="rounded-2xl border border-solid h-auto md:w-[53.1rem] border-gray-200 w-[20.6rem]"
+          className="rounded-2xl border border-solid h-auto md:w-[73rem] border-gray-200 w-[20.6rem]"
           alt="sectionImg"
         />
       </div>
