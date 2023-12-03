@@ -30,9 +30,9 @@ const Pricing = () => {
       tag: "Starter",
       bgColor: "#FEE9CB",
       tagPara: "So you can see how incredible our tool is.",
-      dollar: "$15",
-      dollarMonth: "/mo",
-      dollarTag: "Billed monthly",
+      dollar: billingPeriod === "annually" ? "$19" : "$15",
+      dollarMonth: billingPeriod === "annually" ? "/year" : "/mo",
+      dollarTag: billingPeriod === "annually" ? "$180" : "Billed monthly",
       button: "Get started",
       btnTag: "7 days free trial no credit card needed",
       contentHead: "All Free features, plus:",
@@ -49,9 +49,9 @@ const Pricing = () => {
       tag: "Pro",
       bgColor: "#FDDED6",
       tagPara: "So you can see how incredible our tool is.",
-      dollar: "$45",
-      dollarMonth: "/mo",
-      dollarTag: "Billed monthly",
+      dollar: billingPeriod === "annually" ? "$45" : "$49",
+      dollarMonth: billingPeriod === "annually" ? "/year" : "/mo",
+      dollarTag: billingPeriod === "annually" ? "$540" : "Billed monthly",
       button: "Get started",
       btnTag: " days free trial no credit card needed",
       contentHead: "All Starter features, plus:",
@@ -71,6 +71,19 @@ const Pricing = () => {
       prevPeriod === "monthly" ? "annually" : "monthly"
     );
   };
+
+  const updatedPricingCards = pricingCards.map((card) => {
+    let updatedCard = { ...card };
+
+    if (card.index !== "1" && billingPeriod === "annually") {
+      updatedCard.dollar = "$" + parseFloat(card.dollar.slice(1));
+      updatedCard.dollarTag = "Billed $" + card.dollarTag.slice(1) + " yearly";
+    } else {
+      updatedCard.dollar = card.dollar;
+      updatedCard.dollarTag = card.dollarTag;
+    }
+    return updatedCard;
+  });
 
   return (
     <div className="flex flex-none flex-col max-w-[1200px] mx-auto  py-16 drop-shadow-xl ">
@@ -112,7 +125,7 @@ const Pricing = () => {
       </div>
 
       <div className="md:flex flex-col lg:flex-row gap-4 md:gap-6 flex-wrap md:justify-between justify-center ">
-        {pricingCards.map((card, index) => (
+        {updatedPricingCards.map((card, index) => (
           <>
             <div className="flex flex-col md:flex-none md:w-96 items-start justify-start group pt-8 bg-white rounded-2xl w-[384px] px-8 relative py-4">
               {index === 1 ? (
@@ -132,8 +145,8 @@ const Pricing = () => {
                 {card.tagPara}
               </div>
 
-              <div className="flex flex-row justify-end items-baseline ">
-                <div className=" tracking-wide text-5xl font-PlusJakartaSansExtraBold">
+              <div className="flex flex-row justify-end items-baseline py-2">
+                <div className=" tracking-wide text-6xl font-PlusJakartaSansExtraBold ">
                   {card.dollar}
                 </div>
                 <div className="font-PlusJakartaSansMedium text-slate-400">
