@@ -14,18 +14,18 @@ import cardImg6 from "../assets/cardImg6.webp";
 
 // @ts-ignore
 const Cards = ({ imageSrc, headingText, textContent, headingColor }) => (
-  <div className="flex flex-col md:flex-none md:w-96  items-center justify-center group md:pt-8">
+  <div className="flex flex-col md:flex-none md:w-96 items-center justify-center group md:pt-8 my-8">
     <div className="flex items-center justify-center rounded-2xl border border-solid border-gray-200 bg-[#F1F2F4] md:w-[23.43rem] md:h-[16.56rem] w-[20rem] h-[15rem]">
       <img src={imageSrc} alt="" className="w-[270] h-[185px] " />
     </div>
 
     <div
-      className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-base my-8"
+      className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-base my-3"
       style={{ backgroundColor: `${headingColor}` }}
     >
       {headingText}
     </div>
-    <div className="font-PlusJakartaSansMedium  text-slate-500 md:mr-5 mx-5 py-5">
+    <div className="font-PlusJakartaSansMedium  text-slate-500 md:mr-5 mx-5 md:my-2 my-5">
       <p>{textContent}</p>
     </div>
   </div>
