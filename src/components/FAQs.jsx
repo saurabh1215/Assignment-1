@@ -32,7 +32,10 @@ const FAQs = () => {
   };
 
   return (
-    <div className="flex flex-none flex-col h-[100hv] max-w-[1200px] mx-auto  py-[70px]">
+    <div
+      className="flex flex-none flex-col h-[100hv] max-w-[1200px] mx-auto  py-[70px]"
+      id="faqs"
+    >
       <div className="flex flex-none flex-col items-center justify-center  gap-4">
         <div className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-[16px]">
           Relevant stuff, bla bla 📣

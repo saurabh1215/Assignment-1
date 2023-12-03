@@ -8,18 +8,18 @@ const Navbar = () => {
       <div className="">
         <a href="/" className="flex flex-row">
           <img src={logo} alt="logo" className=" mr-1" />
-          <p className="text-[16px] font-PlusJakartaSansBold text-gray-600 text-lg">
+          <p className="text-base font-PlusJakartaSansBold text-gray-600 ">
             Milton
           </p>
         </a>
       </div>
 
-      <ul className="list-none lg:flex hidden justify-end gap-10 items-center font-PlusJakartaSansBold text-gray-500 text-[16px]">
+      <ul className="list-none lg:flex hidden justify-end gap-10 items-center font-PlusJakartaSansBold text-gray-500 text-base">
         <li className="justify-end hover:underline items-center transition duration-300 ease-in-out">
           <a href="#features">Features</a>
         </li>
         <li className="justify-end hover:underline items-center transition duration-300 ease-in-out">
-          <a href="#testimonial">Testimonial</a>
+          <a href="#testimonials">Testimonial</a>
         </li>
         <li className="justify-end hover:underline items-center transition duration-300 ease-in-out">
           <a href="#pricing">Pricing</a>
@@ -34,12 +34,12 @@ const Navbar = () => {
 
       <div className="flex gap-2">
         <a href="#login">
-          <button className="bg-slate-100 text-gray-600 rounded-xl py-2 px-5 font-PlusJakartaSansBold text-[16px]">
+          <button className="bg-slate-100 text-gray-600 rounded-xl py-2 px-5 font-PlusJakartaSansBold text-base">
             <p>Log in</p>
           </button>
         </a>
         <a href="#contact">
-          <button className="bg-black text-[#FEFEFE] rounded-xl py-2 px-5 font-PlusJakartaSansBold text-[16px]">
+          <button className="bg-black text-[#FEFEFE] rounded-xl py-2 px-5 font-PlusJakartaSansBold text-base">
             <p>Get started</p>
           </button>
         </a>
