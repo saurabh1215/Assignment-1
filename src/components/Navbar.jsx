@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex flex-row items-center justify-between align-center h-[80px] px-10 md:max-w-[90rem] mx-auto max-w-[375px] ">
+    <nav className="flex flex-row items-center justify-between align-center md:max-w-[90rem] mx-auto max-w-[24.43rem] px-5 py-4 h-20">
       <div className="">
         <a href="/" className="flex flex-row">
           <img src={logo} alt="logo" className=" mr-1" />
