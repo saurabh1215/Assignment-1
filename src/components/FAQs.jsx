@@ -37,10 +37,10 @@ const FAQs = () => {
       id="faqs"
     >
       <div className="flex flex-none flex-col items-center justify-center  gap-4">
-        <div className="bg-[#F1F2F4] py-[8px] px-[18px] rounded-full font-PlusJakartaSansBold text-[16px]">
+        <div className="bg-[#F1F2F4] md:py-2 md:px-4 py-2 px-3 rounded-full font-PlusJakartaSansBold text-sm md:text-base ">
           Relevant stuff, bla bla 📣
         </div>
-        <div className="flex flex-none items-center justify-center text-center tracking-wide text-[58px] font-PlusJakartaSansExtraBold ">
+        <div className="flex flex-none items-center justify-center text-center md:text-[3.25rem] text-[2rem] font-PlusJakartaSansExtraBold md:leading-[5rem] md:tracking-wider leading-[2.5rem] tracking-wider py-2 mx-6 my-4 ">
           Frequently asked questions
         </div>
       </div>
